@@ -1,0 +1,30 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Philly Bowl — High School Club Lacrosse Championship' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | Philly Bowl</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Navbar />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

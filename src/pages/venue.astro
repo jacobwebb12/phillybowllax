@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Venue" description="WSFS Sports Complex — home of the Philly Bowl Championship in Chester, PA.">
+  <!-- HERO -->
+  <section class="relative min-h-[85vh] flex items-end overflow-hidden bg-brand-dark">
+    <img src="/images/venue.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="relative z-10 text-left px-6 sm:px-10 lg:px-16 pb-16 max-w-[1280px] mx-auto w-full">
+      <div class="max-w-2xl">
+        <p class="text-brand-light-blue tracking-[0.2em] text-xs mb-2 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">The Venue</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-3">WSFS Sports<br/>Complex</h1>
+        <p class="text-white/80 text-sm" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">
+          A premier multi-sport facility in Chester, PA — the home of the Philly Bowl Championship.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP & ADDRESS -->
+  <section class="py-20 bg-white">
+    <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-10 items-start">
+        <!-- Map -->
+        <div class="lg:col-span-3 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3063.9745670931543!2d-75.38198969999999!3d39.829987900000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6e7585ebd0cd3%3A0x5832c9f6e6aad88d!2sWSFS%20Bank%20Sportsplex!5e0!3m2!1sen!2sus!4v1775225107008!5m2!1sen!2sus"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="WSFS Sports Complex location on Google Maps"
+          ></iframe>
+        </div>
+
+        <!-- Address + CTA -->
+        <div class="lg:col-span-2 space-y-8">
+          <div>
+            <h2 class="text-2xl md:text-3xl text-brand-dark mb-6">Location</h2>
+
+            <div class="flex items-start gap-4 mb-6">
+              <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="font-subhead text-brand-dark tracking-wide text-sm">WSFS Sports Complex</p>
+                <p class="text-brand-gray text-sm mt-1">2485 Seaport Dr<br/>Chester, PA 19013</p>
+              </div>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/dir//WSFS+Bank+Sportsplex,+2485+Seaport+Dr,+Chester,+PA+19013"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-light-blue text-white font-subhead uppercase tracking-wider text-sm px-6 py-3 rounded transition-colors duration-200"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Get Directions
+            </a>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 p-4 bg-brand-off-white rounded-lg border border-gray-200">
+              <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <div>
+                <p class="font-subhead text-brand-dark text-xs tracking-wider">Parking</p>
+                <p class="text-brand-gray text-sm">Free on-site parking is available for all attendees.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-brand-off-white rounded-lg border border-gray-200">
+              <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              <div>
+                <p class="font-subhead text-brand-dark text-xs tracking-wider">Spectators</p>
+                <p class="text-brand-gray text-sm">Spectators are welcome. Bring chairs and shade — seating is limited.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 bg-brand-off-white rounded-lg border border-gray-200">
+              <svg class="w-5 h-5 text-brand-blue shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              <div>
+                <p class="font-subhead text-brand-dark text-xs tracking-wider">Concessions</p>
+                <p class="text-brand-gray text-sm">Food and beverages will be available for purchase on site.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

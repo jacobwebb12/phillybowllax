@@ -1,0 +1,277 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import teamsData from '../data/teams.json';
+const { divisions } = teamsData;
+
+const teamLogos = [
+  '/images/teams/3D Upstate.svg',
+  '/images/teams/BPG.svg',
+  '/images/teams/Brotherly Love.svg',
+  '/images/teams/DUKESELITE.svg',
+  '/images/teams/Freedom.svg',
+  '/images/teams/NATIONS_BEST.svg',
+  '/images/teams/TEAM TEN.svg',
+  '/images/teams/UPSTATE UNION.svg',
+  '/images/teams/XLC.svg',
+  '/images/teams/dc_express.svg',
+  '/images/teams/hilltop_lax.svg',
+];
+
+const faqs = [
+  {
+    q: 'What age groups can participate?',
+    a: 'The Philly Bowl is open to high school club lacrosse teams. Players must be current high school students to be eligible.',
+  },
+  {
+    q: 'How many games does each team play?',
+    a: 'Each team is guaranteed a minimum of 3 games. The exact schedule will depend on your division and bracket placement.',
+  },
+  {
+    q: 'What is the format of the tournament?',
+    a: 'Teams will play pool play games followed by a single-elimination bracket. Seeding is based on pool play results.',
+  },
+  {
+    q: 'Is there an athletic trainer on site?',
+    a: 'Yes, certified athletic trainers will be on site for the duration of the tournament at the WSFS Sports Complex.',
+  },
+  {
+    q: 'Where can I find the schedule?',
+    a: 'The full game schedule will be posted on this website prior to the event. Check back closer to July 17 for updates.',
+  },
+  {
+    q: 'What should teams bring?',
+    a: 'Teams should bring both home and away jerseys, plenty of water, sunscreen, and any personal medical supplies. Shade tents are permitted in designated areas.',
+  },
+];
+---
+
+<BaseLayout title="Home">
+  <!-- HERO -->
+  <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-brand-dark">
+    <img src="/images/background_philly.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
+
+    <div class="relative z-10 text-left px-6 sm:px-10 lg:px-16 max-w-[1280px] mx-auto w-full">
+      <div class="max-w-lg">
+      <p class="font-subhead text-brand-light-blue tracking-[0.2em] text-sm md:text-base mb-4 uppercase">
+        High School Club Lacrosse
+      </p>
+      <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-none mb-6">
+        Philly<br/>Bowl
+      </h1>
+      <p class="font-subhead text-white/80 tracking-[0.15em] text-base md:text-lg mb-2 uppercase">
+        Championship
+      </p>
+      <div class="flex items-center gap-3 text-brand-light-blue font-body text-lg md:text-xl mt-6 mb-10">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <span>July 17, 2026</span>
+        <span class="text-white/30">|</span>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Chester, PA</span>
+      </div>
+      <a
+        href="#details"
+        class="inline-block bg-brand-blue hover:bg-brand-light-blue text-white font-subhead uppercase tracking-wider text-sm px-8 py-3 rounded transition-colors duration-200"
+      >
+        Event Details
+      </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- LOGO CAROUSEL -->
+  <section class="bg-white py-6 overflow-hidden">
+    <div class="flex items-center carousel-track" style="width: max-content;">
+      {[...teamLogos, ...teamLogos].map((logo) => (
+        <img src={logo} alt="" class="h-14 mx-8 object-contain" loading="lazy" />
+      ))}
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section id="details" class="py-20 bg-white">
+    <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl text-center text-brand-dark mb-4">Event Details</h2>
+      <div class="w-16 h-1 bg-brand-blue mx-auto mb-12 rounded-full"></div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <div class="space-y-6">
+          <div class="flex items-start gap-4 p-5 bg-brand-off-white rounded-lg border border-gray-200">
+            <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm text-brand-gray mb-1">Date</h4>
+              <p class="font-subhead text-brand-dark tracking-wide">July 17, 2026</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-5 bg-brand-off-white rounded-lg border border-gray-200">
+            <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm text-brand-gray mb-1">Venue</h4>
+              <p class="font-subhead text-brand-dark tracking-wide">WSFS Sports Complex</p>
+              <p class="text-sm text-brand-gray mt-1">2485 Seaport Dr, Chester, PA 19013</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-5 bg-brand-off-white rounded-lg border border-gray-200">
+            <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm text-brand-gray mb-1">Divisions</h4>
+              <p class="font-subhead text-brand-dark tracking-wide">2027 &middot; 2028 &middot; 2029</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-5 bg-brand-off-white rounded-lg border border-gray-200">
+            <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <h4 class="text-sm text-brand-gray mb-1">Schedule</h4>
+              <p class="font-subhead text-brand-dark tracking-wide">Coming Soon</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 content-start">
+          <div class="bg-brand-dark text-center p-8 rounded-lg">
+            <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">3</p>
+            <p class="font-subhead text-white/70 text-xs tracking-wider uppercase">Divisions</p>
+          </div>
+          <div class="bg-brand-dark text-center p-8 rounded-lg">
+            <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">24</p>
+            <p class="font-subhead text-white/70 text-xs tracking-wider uppercase">Teams</p>
+          </div>
+          <div class="bg-brand-dark text-center p-8 rounded-lg">
+            <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">8</p>
+            <p class="font-subhead text-white/70 text-xs tracking-wider uppercase">Per Division</p>
+          </div>
+          <div class="bg-brand-dark text-center p-8 rounded-lg">
+            <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">1</p>
+            <p class="font-subhead text-white/70 text-xs tracking-wider uppercase">Day Event</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAMS ATTENDING -->
+  <section class="py-20 bg-brand-off-white">
+    <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl text-center text-brand-dark mb-4">Teams Attending</h2>
+      <div class="w-16 h-1 bg-brand-blue mx-auto mb-10 rounded-full"></div>
+
+      <div class="flex justify-center gap-2 mb-10" role="tablist" aria-label="Division tabs">
+        {divisions.map((div, i) => (
+          <button
+            class="division-tab px-6 py-2 text-sm font-subhead uppercase tracking-wider rounded border border-brand-gray/30 transition-colors duration-200"
+            data-tab={i}
+            role="tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
+            aria-controls={`panel-${i}`}
+          >
+            {div.name}
+          </button>
+        ))}
+      </div>
+
+      {divisions.map((div, i) => (
+        <div
+          id={`panel-${i}`}
+          class="division-panel"
+          role="tabpanel"
+          data-panel={i}
+          style={i !== 0 ? 'display:none' : ''}
+        >
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {div.teams.map((team) => (
+              <div class="bg-white rounded-lg border border-gray-200 p-6 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+                <img
+                  src={team.logo}
+                  alt={team.name}
+                  class="w-16 h-16 mx-auto mb-3 rounded object-contain"
+                  loading="lazy"
+                />
+                <p class="font-subhead text-xs text-brand-dark tracking-wider uppercase">{team.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="mx-auto max-w-[800px] px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl text-center text-brand-dark mb-4">FAQ</h2>
+      <div class="w-16 h-1 bg-brand-blue mx-auto mb-12 rounded-full"></div>
+
+      <div class="space-y-3">
+        {faqs.map((faq, i) => (
+          <div class="border border-gray-200 rounded-lg overflow-hidden">
+            <button
+              class="faq-toggle w-full flex items-center justify-between p-5 text-left font-subhead text-sm tracking-wider uppercase text-brand-dark hover:bg-brand-off-white transition-colors duration-200"
+              aria-expanded="false"
+              aria-controls={`faq-${i}`}
+            >
+              <span>{faq.q}</span>
+              <svg class="faq-chevron w-5 h-5 text-brand-gray shrink-0 ml-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div id={`faq-${i}`} class="faq-content hidden px-5 pb-5">
+              <p class="text-brand-gray text-sm leading-relaxed">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Division Tabs
+  const tabs = document.querySelectorAll<HTMLButtonElement>('.division-tab');
+  const panels = document.querySelectorAll<HTMLDivElement>('.division-panel');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const idx = tab.dataset.tab;
+
+      tabs.forEach(t => {
+        t.setAttribute('aria-selected', 'false');
+        t.classList.remove('bg-brand-blue', 'text-white', 'border-brand-blue');
+      });
+
+      tab.setAttribute('aria-selected', 'true');
+      tab.classList.add('bg-brand-blue', 'text-white', 'border-brand-blue');
+
+      panels.forEach(p => {
+        p.style.display = p.dataset.panel === idx ? '' : 'none';
+      });
+    });
+  });
+
+  tabs[0]?.classList.add('bg-brand-blue', 'text-white', 'border-brand-blue');
+
+  // FAQ Accordion
+  document.querySelectorAll<HTMLButtonElement>('.faq-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+
+      const content = btn.nextElementSibling as HTMLElement;
+      content.classList.toggle('hidden', expanded);
+
+      const chevron = btn.querySelector('.faq-chevron') as HTMLElement;
+      chevron.style.transform = expanded ? '' : 'rotate(180deg)';
+    });
+  });
+</script>

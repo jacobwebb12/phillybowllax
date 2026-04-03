@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Field Map" description="Field map for the Philly Bowl Championship — coming soon.">
+  <section class="relative py-32 bg-brand-dark overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-blue/20"></div>
+    <div class="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-subhead text-brand-light-blue tracking-[0.2em] text-sm mb-4 uppercase">Navigate the Venue</p>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl text-white mb-6">Field Map</h1>
+    </div>
+  </section>
+
+  <section class="py-32 bg-white">
+    <div class="mx-auto max-w-[600px] px-4 text-center">
+      <div class="w-20 h-20 rounded-full bg-brand-blue/10 flex items-center justify-center mx-auto mb-8">
+        <svg class="w-10 h-10 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+      </div>
+      <h2 class="text-3xl md:text-4xl text-brand-dark mb-4">Coming Soon</h2>
+      <div class="w-16 h-1 bg-brand-blue mx-auto mb-8 rounded-full"></div>
+      <p class="text-brand-gray max-w-md mx-auto">
+        The field map will be posted here prior to the tournament. Check back closer to July 17 for field assignments and venue layout.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

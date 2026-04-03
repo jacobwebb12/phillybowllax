@@ -1,0 +1,115 @@
+---
+const currentPath = Astro.url.pathname;
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/venue', label: 'Venue' },
+  { href: '/hotels', label: 'Hotels' },
+  { href: '/game-film', label: 'Game Film' },
+  { href: '/field-map', label: 'Field Map' },
+  { href: '/rules', label: 'Rules' },
+];
+---
+
+<nav class="sticky top-0 z-50 bg-white border-b-2 border-brand-blue shadow-sm" role="navigation" aria-label="Main navigation">
+  <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="shrink-0">
+        <img src="/logos/PhillyBowl_Wordmark_FullColor_LightBackground.png" alt="Philly Bowl" class="h-10" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-1">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class:list={[
+              'px-3 py-2 text-sm font-subhead tracking-wider uppercase transition-colors duration-200 rounded',
+              currentPath === link.href
+                ? 'text-brand-blue'
+                : 'text-brand-dark hover:text-brand-blue',
+            ]}
+            aria-current={currentPath === link.href ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden relative w-8 h-8 flex items-center justify-center text-brand-dark"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="hamburger-line top-[8px]"></span>
+        <span class="hamburger-line top-[15px]"></span>
+        <span class="hamburger-line top-[22px]"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden bg-white border-t border-gray-200"
+    role="menu"
+  >
+    <div class="px-4 py-3 space-y-1">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={[
+            'block px-3 py-2 text-sm font-subhead tracking-wider uppercase rounded transition-colors duration-200',
+            currentPath === link.href
+              ? 'text-brand-blue bg-brand-off-white'
+              : 'text-brand-dark hover:text-brand-blue hover:bg-brand-off-white',
+          ]}
+          role="menuitem"
+          aria-current={currentPath === link.href ? 'page' : undefined}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<style>
+  .hamburger-line {
+    position: absolute;
+    left: 2px;
+    width: 24px;
+    height: 2px;
+    background: #1c252d;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menu-open .hamburger-line:nth-child(1) {
+    top: 15px !important;
+    transform: rotate(45deg);
+  }
+
+  .menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-open .hamburger-line:nth-child(3) {
+    top: 15px !important;
+    transform: rotate(-45deg);
+  }
+</style>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn')!;
+  const menu = document.getElementById('mobile-menu')!;
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('menu-open');
+    menu.classList.toggle('hidden', !isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>

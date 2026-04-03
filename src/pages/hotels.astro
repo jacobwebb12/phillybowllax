@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Hotels" description="Find nearby hotels and accommodations for the Philly Bowl Championship.">
+  <section class="min-h-[80vh] flex items-center bg-white">
+    <div class="mx-auto max-w-[700px] px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <p class="text-brand-light-blue tracking-[0.2em] text-xs mb-3 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Accommodations</p>
+      <h1 class="text-4xl md:text-5xl text-brand-dark mb-8">Hotels</h1>
+      <div class="w-16 h-1 bg-brand-blue mx-auto mb-10 rounded-full"></div>
+
+      <p class="text-brand-gray mb-6 leading-relaxed">
+        The Philly Bowl Championship does not have an official hotel block partner. Teams and families are encouraged to book accommodations independently. The Chester, PA area offers a wide range of hotel options to fit every budget and preference.
+      </p>
+      <p class="text-brand-gray mb-10 leading-relaxed">
+        We recommend booking early, as July is a popular travel period in the Philadelphia area. Many hotels near the WSFS Sports Complex are conveniently located within a short drive of the venue.
+      </p>
+
+      <a
+        href="https://www.google.com/travel/hotels/Chester%2C%20PA?q=hotels%20near%20WSFS%20Sports%20Complex%20Chester%20PA"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-light-blue text-white uppercase tracking-wider text-sm px-8 py-3 rounded transition-colors duration-200"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        Search Hotels in the Area
+      </a>
+    </div>
+  </section>
+</BaseLayout>

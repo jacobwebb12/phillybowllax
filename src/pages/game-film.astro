@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Game Film" description="Professional game film for every Philly Bowl game — powered by Starlight.">
+  <!-- HERO -->
+  <section class="bg-brand-dark py-20 border-t-2 border-brand-blue">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-16">
+      <div class="max-w-2xl">
+        <p class="text-brand-light-blue tracking-[0.2em] text-xs mb-3 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Every Game. Every Play.</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-6">
+          Game Film <span class="text-green-500">Powered by Starlight</span>
+        </h1>
+        <p class="text-gray-400 text-base leading-relaxed mb-8">
+          All games are professionally filmed in 4K quality by Starlight and made available for players, families, and college coaches to maximize your recruiting exposure.
+        </p>
+        <a
+          href="https://starlighttv.net/events"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-green-500 hover:bg-green-600 text-white uppercase tracking-wider text-sm px-8 py-3 rounded transition-colors duration-200"
+        >
+          Access Game Film
+        </a>
+      </div>
+
+      <!-- Feature highlights -->
+      <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-gray-700">
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-brand-light-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          <span class="text-white text-xs uppercase tracking-wider" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Advanced Player Tagging Platform</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-brand-light-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          <span class="text-white text-xs uppercase tracking-wider" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">4K Game Film</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 text-brand-light-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+          <span class="text-white text-xs uppercase tracking-wider" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Championship Live Stream</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="bg-brand-dark pb-20">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-16">
+      <div class="relative rounded-xl overflow-hidden bg-black aspect-video" id="video-container">
+        <video
+          id="sample-video"
+          class="w-full h-full object-cover"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        >
+          <source src="/videos/highlight.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div id="play-overlay" class="absolute inset-0 flex items-center justify-center bg-black/40">
+          <div class="w-16 h-16 rounded-full bg-brand-blue/80 flex items-center justify-center">
+            <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WARNING CALLOUT -->
+  <section class="bg-brand-dark pb-16">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-16">
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-6 flex gap-4 items-start">
+        <svg class="w-6 h-6 text-amber-500 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div>
+          <span class="text-amber-700 text-sm tracking-wider uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Please Note:</span>
+          <span class="text-brand-dark text-sm ml-1">No outside elevated filming is allowed including VEO, Pixellot, Trace, or any other camera attached to an elevated pole. It will be taken down.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-20 bg-brand-off-white">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-16">
+      <p class="text-brand-blue tracking-[0.2em] text-xs mb-3 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">How It Works</p>
+      <h2 class="text-3xl md:text-4xl text-brand-dark mb-12">Access Your Film</h2>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        {[
+          { step: '01', title: 'Play Your Games', desc: 'Every game at the Philly Bowl Championship is filmed by our professional crew from sideline and endzone angles.' },
+          { step: '02', title: 'Film Is Processed', desc: 'After the event, game film is edited and uploaded. Teams and players will receive access links within days of the tournament.' },
+          { step: '03', title: 'Share With Coaches', desc: 'Send your game film directly to college coaches. Maximize your exposure and recruiting potential with professional footage.' },
+        ].map(item => (
+          <div class="bg-white rounded-lg border border-gray-200 p-8">
+            <span class="text-4xl text-brand-blue" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">{item.step}</span>
+            <h3 class="text-sm tracking-wider uppercase text-brand-dark mt-4 mb-3" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">{item.title}</h3>
+            <p class="text-brand-gray text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center">
+        <a
+          href="https://starlighttv.net/events"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-green-500 hover:bg-green-600 text-white uppercase tracking-wider text-sm px-8 py-3 rounded transition-colors duration-200"
+        >
+          Access Game Film
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const video = document.getElementById('sample-video') as HTMLVideoElement;
+  const overlay = document.getElementById('play-overlay')!;
+
+  if (video) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().then(() => {
+              overlay.style.display = 'none';
+            }).catch(() => {});
+          } else {
+            video.pause();
+            overlay.style.display = '';
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(video);
+  }
+</script>

@@ -1,0 +1,43 @@
+{
+  "divisions": [
+    {
+      "name": "2027",
+      "teams": [
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" }
+      ]
+    },
+    {
+      "name": "2028",
+      "teams": [
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" }
+      ]
+    },
+    {
+      "name": "2029",
+      "teams": [
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" },
+        { "name": "Team TBD", "logo": "/images/teams/placeholder.svg" }
+      ]
+    }
+  ]
+}

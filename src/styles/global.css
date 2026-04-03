@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ── Brand Fonts ── */
+@font-face {
+  font-family: 'Beachwood';
+  src: url('/fonts/Beachwood-WideExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DDC Hardware';
+  src: url('/fonts/DDCHardware-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Design Tokens ── */
+@theme {
+  --color-brand-dark: #1c252d;
+  --color-brand-gray: #7a868e;
+  --color-brand-light-blue: #60b1e7;
+  --color-brand-blue: #0071ce;
+  --color-brand-white: #ffffff;
+  --color-brand-off-white: #f4f5f6;
+
+  --font-family-headline: 'Beachwood', 'Impact', sans-serif;
+  --font-family-subhead: 'DDC Hardware', 'Arial Black', sans-serif;
+  --font-family-body: 'Industry', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ── Base Styles ── */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-body);
+  color: var(--color-brand-dark);
+  background-color: var(--color-brand-white);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family-headline);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-family-subhead);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+a, button {
+  font-family: var(--font-family-subhead);
+}
+
+/* ── Logo Carousel ── */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carousel-track {
+  animation: scroll-left 30s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
