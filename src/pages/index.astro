@@ -47,38 +47,25 @@ const faqs = [
 
 <BaseLayout title="Home">
   <!-- HERO -->
-  <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-brand-dark">
-    <img src="/images/background_philly.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
+  <section class="relative min-h-screen flex items-center overflow-hidden bg-brand-dark">
+    <img src="/images/PHILLY_BOWL_BANNER.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
 
-    <div class="relative z-10 text-left px-6 sm:px-10 lg:px-16 max-w-[1280px] mx-auto w-full">
-      <div class="max-w-lg">
-      <p class="font-subhead text-brand-light-blue tracking-[0.2em] text-sm md:text-base mb-4 uppercase">
-        High School Club Lacrosse
-      </p>
-      <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-none mb-6">
-        Philly<br/>Bowl
-      </h1>
-      <p class="font-subhead text-white/80 tracking-[0.15em] text-base md:text-lg mb-2 uppercase">
-        Championship
-      </p>
-      <div class="flex items-center gap-3 text-brand-light-blue font-body text-lg md:text-xl mt-6 mb-10">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        <span>July 17, 2026</span>
-        <span class="text-white/30">|</span>
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <span>Chester, PA</span>
+    <div class="relative z-10 px-6 sm:px-10 lg:px-16 max-w-[1280px] mx-auto w-full">
+      <div class="max-w-xl">
+        <p class="text-brand-light-blue tracking-[0.2em] text-xs md:text-sm mb-4 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">High School Club Lacrosse</p>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl text-white leading-[0.95] mb-6">
+          The Philly Bowl<br/>Championship
+        </h1>
+        <p class="text-white/80 text-base md:text-lg leading-relaxed max-w-md mb-8">
+          A boutique championship event designed for maximum college exposure. The Philly Bowl brings together the best club programs in the country for a premier recruiting experience at WSFS Sports Complex.
+        </p>
+        <a
+          href="#details"
+          class="inline-block bg-brand-blue hover:bg-brand-light-blue text-white uppercase tracking-wider text-sm px-8 py-3 rounded transition-colors duration-200"
+        >
+          Event Details
+        </a>
       </div>
-      <a
-        href="#details"
-        class="inline-block bg-brand-blue hover:bg-brand-light-blue text-white font-subhead uppercase tracking-wider text-sm px-8 py-3 rounded transition-colors duration-200"
-      >
-        Event Details
-      </a>
-      </div>
-    </div>
-
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
@@ -92,84 +79,90 @@ const faqs = [
   </section>
 
   <!-- EVENT DETAILS -->
-  <section id="details" class="py-20 bg-white">
-    <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl text-center text-brand-dark mb-4">Event Details</h2>
-      <div class="w-16 h-1 bg-brand-blue mx-auto mb-12 rounded-full"></div>
+  <section id="details" class="py-20 bg-brand-dark">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-16">
+      <!-- Section header - left aligned -->
+      <p class="text-brand-blue tracking-[0.2em] text-xs mb-3 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">July 17, 2026 &middot; WSFS Sports Complex</p>
+      <h2 class="text-3xl md:text-4xl text-white mb-14">Event Details</h2>
 
-      <div class="grid md:grid-cols-2 gap-8 mb-16">
-        <div class="space-y-6">
-          <div class="flex items-start gap-4 p-5 bg-brand-off-white rounded-lg border border-gray-200">
-            <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
-              <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            </div>
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Left: icon + text rows -->
+        <div class="space-y-8">
+          <!-- Date -->
+          <div class="flex items-start gap-4">
+            <svg class="w-6 h-6 text-brand-blue shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
             <div>
-              <h4 class="text-sm text-brand-gray mb-1">Date</h4>
-              <p class="font-subhead text-brand-dark tracking-wide">July 17, 2026</p>
+              <p class="text-white text-lg" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">July 17th, 2026</p>
+              <p class="text-brand-gray text-xs uppercase tracking-widest mt-1" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Date</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4 p-5 bg-brand-off-white rounded-lg border border-gray-200">
-            <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
-              <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
+          <!-- Location -->
+          <div class="flex items-start gap-4">
+            <svg class="w-6 h-6 text-brand-blue shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <div>
-              <h4 class="text-sm text-brand-gray mb-1">Venue</h4>
-              <p class="font-subhead text-brand-dark tracking-wide">WSFS Sports Complex</p>
-              <p class="text-sm text-brand-gray mt-1">2485 Seaport Dr, Chester, PA 19013</p>
+              <p class="text-white text-lg" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">WSFS Sports Complex</p>
+              <p class="text-brand-gray text-xs uppercase tracking-widest mt-1" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Location</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4 p-5 bg-brand-off-white rounded-lg border border-gray-200">
-            <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
-              <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
+          <!-- Divisions -->
+          <div class="flex items-start gap-4">
+            <svg class="w-6 h-6 text-brand-blue shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
             <div>
-              <h4 class="text-sm text-brand-gray mb-1">Divisions</h4>
-              <p class="font-subhead text-brand-dark tracking-wide">2027 &middot; 2028 &middot; 2029</p>
+              <p class="text-white text-lg" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">2027, 2028, 2029</p>
+              <p class="text-brand-gray text-xs uppercase tracking-widest mt-1" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Divisions</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4 p-5 bg-brand-off-white rounded-lg border border-gray-200">
-            <div class="flex-none w-10 h-10 rounded bg-brand-blue/10 flex items-center justify-center">
-              <svg class="w-5 h-5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
+          <!-- Fields -->
+          <div class="flex items-start gap-4">
+            <svg class="w-6 h-6 text-brand-blue shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M12 7v14M2 14h20"/></svg>
             <div>
-              <h4 class="text-sm text-brand-gray mb-1">Schedule</h4>
-              <p class="font-subhead text-brand-dark tracking-wide">Coming Soon</p>
+              <p class="text-white text-lg" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">3 Fields</p>
+              <p class="text-brand-gray text-xs uppercase tracking-widest mt-1" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">2 Back-to-Back for Recruiting Year Games</p>
             </div>
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 content-start">
-          <div class="bg-brand-dark text-center p-8 rounded-lg">
+        <!-- Right: stat cards -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="border border-gray-600 rounded-lg p-6 text-center">
             <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">3</p>
-            <p class="font-subhead text-white/70 text-xs tracking-wider uppercase">Divisions</p>
+            <p class="text-white/70 text-xs uppercase tracking-wider mt-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Divisions</p>
+            <p class="text-brand-gray text-xs mt-1">2027 &middot; 2028 &middot; 2029</p>
           </div>
-          <div class="bg-brand-dark text-center p-8 rounded-lg">
-            <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">24</p>
-            <p class="font-subhead text-white/70 text-xs tracking-wider uppercase">Teams</p>
-          </div>
-          <div class="bg-brand-dark text-center p-8 rounded-lg">
+          <div class="border border-gray-600 rounded-lg p-6 text-center">
             <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">8</p>
-            <p class="font-subhead text-white/70 text-xs tracking-wider uppercase">Per Division</p>
+            <p class="text-white/70 text-xs uppercase tracking-wider mt-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Teams / Div</p>
+            <p class="text-brand-gray text-xs mt-1">Elite Programs</p>
           </div>
-          <div class="bg-brand-dark text-center p-8 rounded-lg">
-            <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">1</p>
-            <p class="font-subhead text-white/70 text-xs tracking-wider uppercase">Day Event</p>
+          <div class="border border-gray-600 rounded-lg p-6 text-center">
+            <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">3</p>
+            <p class="text-white/70 text-xs uppercase tracking-wider mt-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Games Min</p>
+            <p class="text-brand-gray text-xs mt-1">Championship Format</p>
           </div>
         </div>
+      </div>
+
+      <!-- Schedule button -->
+      <div class="text-center mt-14">
+        <a
+          href="#"
+          class="inline-block bg-brand-blue hover:bg-brand-light-blue text-white uppercase tracking-wider text-sm px-10 py-3 rounded transition-colors duration-200"
+        >
+          View Schedule on Tourney Machine
+        </a>
       </div>
     </div>
   </section>
 
   <!-- TEAMS ATTENDING -->
   <section class="py-20 bg-brand-off-white">
-    <div class="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl text-center text-brand-dark mb-4">Teams Attending</h2>
-      <div class="w-16 h-1 bg-brand-blue mx-auto mb-10 rounded-full"></div>
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-16">
+      <h2 class="text-3xl md:text-4xl text-brand-dark mb-6">Teams Attending</h2>
 
-      <div class="flex justify-center gap-2 mb-10" role="tablist" aria-label="Division tabs">
+      <div class="flex gap-2 mb-10" role="tablist" aria-label="Division tabs">
         {divisions.map((div, i) => (
           <button
             class="division-tab px-6 py-2 text-sm font-subhead uppercase tracking-wider rounded border border-brand-gray/30 transition-colors duration-200"

@@ -2,25 +2,79 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Rules" description="Tournament rules for the Philly Bowl Championship — coming soon.">
-  <section class="relative py-32 bg-brand-dark overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-brand-blue/20"></div>
-    <div class="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
-      <p class="font-subhead text-brand-light-blue tracking-[0.2em] text-sm mb-4 uppercase">Tournament Guidelines</p>
-      <h1 class="text-5xl md:text-6xl lg:text-7xl text-white mb-6">Rules</h1>
+<BaseLayout title="Rules" description="Tournament rules for the Philly Bowl Championship.">
+  <!-- HERO -->
+  <section class="bg-brand-dark py-16 border-t-2 border-brand-blue">
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-16">
+      <p class="text-brand-light-blue tracking-[0.2em] text-xs mb-3 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Tournament Guidelines</p>
+      <h1 class="text-4xl md:text-5xl text-white">Rules</h1>
     </div>
   </section>
 
-  <section class="py-32 bg-white">
-    <div class="mx-auto max-w-[600px] px-4 text-center">
-      <div class="w-20 h-20 rounded-full bg-brand-blue/10 flex items-center justify-center mx-auto mb-8">
-        <svg class="w-10 h-10 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+  <!-- RULES CONTENT -->
+  <section class="py-16 bg-white">
+    <div class="mx-auto max-w-[900px] px-6 sm:px-10 lg:px-16">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-3xl text-brand-dark mb-2">Tournament Rules</h2>
+        <p class="text-brand-gray" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Summer 2026</p>
       </div>
-      <h2 class="text-3xl md:text-4xl text-brand-dark mb-4">Coming Soon</h2>
-      <div class="w-16 h-1 bg-brand-blue mx-auto mb-8 rounded-full"></div>
-      <p class="text-brand-gray max-w-md mx-auto">
-        Tournament rules and regulations will be published here ahead of the event. All participating teams will be notified when the rules are finalized.
-      </p>
+
+      <!-- Player Eligibility -->
+      <div class="mb-10">
+        <h3 class="text-lg text-brand-dark mb-4" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Player Eligibility</h3>
+        <ul class="space-y-3 text-brand-gray text-sm leading-relaxed list-disc pl-5">
+          <li>All players must compete in the division with the class they were in during the 2025-2026 academic year unless a player has proof of enrollment in a "postgraduate" or "reclass" year for the upcoming fall. Players are not allowed to play down a division because they have future plans for a "postgraduate" year, there must be set plans and a proof of enrollment for the upcoming 2026-2027 school year.</li>
+          <li>Club teams that do not comply with this rule will be disqualified from the tournament, and game scores will be recorded as a 10-0 loss on Tourney Machine.</li>
+        </ul>
+      </div>
+
+      <!-- Rules & Operations -->
+      <div class="mb-10">
+        <h3 class="text-lg text-brand-dark mb-4" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Rules & Operations</h3>
+        <ul class="space-y-3 text-brand-gray text-sm leading-relaxed list-disc pl-5">
+          <li>NCAA rules apply, including shot clocks</li>
+          <li>Four 11-minute running quarters</li>
+          <li>1-minute between quarters; 2-minute halftime</li>
+          <li>Scorekeepers in charge of keeping game, penalty, and shot clock time</li>
+          <li><strong class="text-brand-dark">One 45 second timeout</strong> (DEAD BALL or under restraining line) at any point in the game. Game clock will stop for timeout.</li>
+          <li>All games will be played until there is a winner, overtime will be untimed sudden death.</li>
+        </ul>
+      </div>
+
+      <!-- Penalties -->
+      <div class="mb-10">
+        <h3 class="text-lg text-brand-dark mb-4" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Penalties</h3>
+        <ul class="space-y-3 text-brand-gray text-sm leading-relaxed list-disc pl-5">
+          <li>Penalties will be served in the box (penalty timers / scorekeepers on each field)</li>
+        </ul>
+      </div>
+
+      <!-- Player Safety -->
+      <div class="mb-10">
+        <h3 class="text-lg text-brand-dark mb-4" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Player Safety</h3>
+        <ul class="space-y-3 text-brand-gray text-sm leading-relaxed list-disc pl-5">
+          <li>All rules in effect will be to encourage hard physical play with player safety at the top of mind.</li>
+          <li>There is no justification for deliberate and violent collision by any player, especially intentional player-to-player collisions with defenseless players (so-called "blind side" and "buddy pass" checks), checks involving the head and/or neck, and excessive body-checks ("take-out checks").</li>
+          <li>Officials will apply violent collision rules and utilize the most severe penalty option, game ejection, plus 2-minute un-releasable penalty</li>
+          <li>Ejection/Suspension: Player may or may not be allowed to return for the next game depending on severity of play. This will be a referee, tournament leadership decision. Exceptional intent or egregiousness could result in expulsion from the tournament. Explanation of this type of ejection fouls/infractions:
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>Any hit delivered above shoulders with over 3 steps with intent and an in an uncontrolled manner</li>
+              <li>Any hit delivered with hands to player's head or neck including follow through</li>
+              <li>A player leading with the head or initiating contact with the head INCLUDING the ball carrier.</li>
+              <li>Any hit delivered on a player in a vulnerable or defenseless position with over 2 steps</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sportsmanship -->
+      <div class="mb-10">
+        <h3 class="text-lg text-brand-dark mb-4" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Sportsmanship</h3>
+        <ul class="space-y-3 text-brand-gray text-sm leading-relaxed list-disc pl-5">
+          <li>All players, coaches, staff, parents, spectators and everyone in attendance should always be respectful.</li>
+          <li>Fighting is grounds for automatic suspension at the referee or tournament leaderships discretion.</li>
+        </ul>
+      </div>
     </div>
   </section>
 </BaseLayout>
