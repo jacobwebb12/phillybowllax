@@ -17,32 +17,7 @@ const teamLogos = [
   '/images/teams/hilltop_lax.svg',
 ];
 
-const faqs = [
-  {
-    q: 'What age groups can participate?',
-    a: 'The Philly Bowl is open to high school club lacrosse teams. Players must be current high school students to be eligible.',
-  },
-  {
-    q: 'How many games does each team play?',
-    a: 'Each team is guaranteed a minimum of 3 games. The exact schedule will depend on your division and bracket placement.',
-  },
-  {
-    q: 'What is the format of the tournament?',
-    a: 'Teams will play pool play games followed by a single-elimination bracket. Seeding is based on pool play results.',
-  },
-  {
-    q: 'Is there an athletic trainer on site?',
-    a: 'Yes, certified athletic trainers will be on site for the duration of the tournament at the WSFS Sports Complex.',
-  },
-  {
-    q: 'Where can I find the schedule?',
-    a: 'The full game schedule will be posted on this website prior to the event. Check back closer to July 17 for updates.',
-  },
-  {
-    q: 'What should teams bring?',
-    a: 'Teams should bring both home and away jerseys, plenty of water, sunscreen, and any personal medical supplies. Shade tents are permitted in designated areas.',
-  },
-];
+
 ---
 
 <BaseLayout title="Home">
@@ -53,7 +28,7 @@ const faqs = [
     <div class="relative z-10 px-6 sm:px-10 lg:px-16 max-w-[1280px] mx-auto w-full">
       <div class="max-w-xl">
         <p class="text-brand-light-blue tracking-[0.2em] text-xs md:text-sm mb-4 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">High School Club Lacrosse</p>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl text-white leading-[0.95] mb-6">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl text-white leading-[0.95] mb-6 whitespace-nowrap">
           The Philly Bowl<br/>Championship
         </h1>
         <p class="text-white/80 text-base md:text-lg leading-relaxed max-w-md mb-8">
@@ -85,7 +60,7 @@ const faqs = [
       <p class="text-brand-blue tracking-[0.2em] text-xs mb-3 uppercase" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">July 17, 2026 &middot; WSFS Sports Complex</p>
       <h2 class="text-3xl md:text-4xl text-white mb-14">Event Details</h2>
 
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Left: icon + text rows -->
         <div class="space-y-8">
           <!-- Date -->
@@ -125,8 +100,10 @@ const faqs = [
           </div>
         </div>
 
-        <!-- Right: stat cards -->
-        <div class="grid grid-cols-3 gap-4">
+        <!-- Right: logo + stat cards -->
+        <div class="flex flex-col items-center -mt-6">
+          <img src="/logos/philly_logo.png" alt="Philly Bowl" class="h-44 md:h-52 mb-4 object-contain" />
+        <div class="grid grid-cols-3 gap-4 w-full">
           <div class="border border-gray-600 rounded-lg p-6 text-center">
             <p class="text-4xl md:text-5xl text-brand-blue mb-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">3</p>
             <p class="text-white/70 text-xs uppercase tracking-wider mt-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Divisions</p>
@@ -142,6 +119,7 @@ const faqs = [
             <p class="text-white/70 text-xs uppercase tracking-wider mt-2" style="font-family: 'DDC Hardware', 'Arial Black', sans-serif;">Games Min</p>
             <p class="text-brand-gray text-xs mt-1">Championship Format</p>
           </div>
+        </div>
         </div>
       </div>
 
@@ -186,14 +164,13 @@ const faqs = [
         >
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {div.teams.map((team) => (
-              <div class="bg-white rounded-lg border border-gray-200 p-6 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+              <div class="bg-white rounded-lg border border-gray-200 aspect-square flex items-center justify-center p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
                 <img
                   src={team.logo}
                   alt={team.name}
-                  class="w-16 h-16 mx-auto mb-3 rounded object-contain"
+                  class="w-[70%] h-[70%] object-contain"
                   loading="lazy"
                 />
-                <p class="font-subhead text-xs text-brand-dark tracking-wider uppercase">{team.name}</p>
               </div>
             ))}
           </div>
@@ -202,31 +179,6 @@ const faqs = [
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-20 bg-white">
-    <div class="mx-auto max-w-[800px] px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl text-center text-brand-dark mb-4">FAQ</h2>
-      <div class="w-16 h-1 bg-brand-blue mx-auto mb-12 rounded-full"></div>
-
-      <div class="space-y-3">
-        {faqs.map((faq, i) => (
-          <div class="border border-gray-200 rounded-lg overflow-hidden">
-            <button
-              class="faq-toggle w-full flex items-center justify-between p-5 text-left font-subhead text-sm tracking-wider uppercase text-brand-dark hover:bg-brand-off-white transition-colors duration-200"
-              aria-expanded="false"
-              aria-controls={`faq-${i}`}
-            >
-              <span>{faq.q}</span>
-              <svg class="faq-chevron w-5 h-5 text-brand-gray shrink-0 ml-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div id={`faq-${i}`} class="faq-content hidden px-5 pb-5">
-              <p class="text-brand-gray text-sm leading-relaxed">{faq.a}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
 </BaseLayout>
 
 <script>
@@ -254,17 +206,5 @@ const faqs = [
 
   tabs[0]?.classList.add('bg-brand-blue', 'text-white', 'border-brand-blue');
 
-  // FAQ Accordion
-  document.querySelectorAll<HTMLButtonElement>('.faq-toggle').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
 
-      const content = btn.nextElementSibling as HTMLElement;
-      content.classList.toggle('hidden', expanded);
-
-      const chevron = btn.querySelector('.faq-chevron') as HTMLElement;
-      chevron.style.transform = expanded ? '' : 'rotate(180deg)';
-    });
-  });
 </script>
