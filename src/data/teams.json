@@ -1,16 +1,16 @@
 {
   "divisions": [
     {
-      "name": "2027",
+      "name": "2029",
       "teams": [
         { "name": "Hilltop", "logo": "/images/teams/hilltop_lax.svg" },
         { "name": "DC Express", "logo": "/images/teams/dc_express.svg" },
         { "name": "Nations Best", "logo": "/images/teams/NATIONS_BEST.svg" },
-        { "name": "3D Upstate", "logo": "/images/teams/3D Upstate.svg" },
+        { "name": "Upstate Union", "logo": "/images/teams/UPSTATE UNION.svg" },
+        { "name": "Dukes Elite", "logo": "/images/teams/DUKESELITE.svg" },
         { "name": "Team 10", "logo": "/images/teams/TEAM TEN.svg" },
-        { "name": "Brotherly Love", "logo": "/images/teams/Brotherly Love.svg" },
-        { "name": "Freedom", "logo": "/images/teams/Freedom.svg" },
-        { "name": "Hilltop Uncommitted", "logo": "/images/teams/hilltop_lax.svg" }
+        { "name": "Hilltop 29", "logo": "/images/teams/hilltop_lax.svg" },
+        { "name": "BPG National", "logo": "/images/teams/BPG.svg" }
       ]
     },
     {
@@ -27,16 +27,16 @@
       ]
     },
     {
-      "name": "2029",
+      "name": "2027",
       "teams": [
         { "name": "Hilltop", "logo": "/images/teams/hilltop_lax.svg" },
         { "name": "DC Express", "logo": "/images/teams/dc_express.svg" },
         { "name": "Nations Best", "logo": "/images/teams/NATIONS_BEST.svg" },
-        { "name": "Upstate Union", "logo": "/images/teams/UPSTATE UNION.svg" },
-        { "name": "Dukes Elite", "logo": "/images/teams/DUKESELITE.svg" },
+        { "name": "3D Upstate", "logo": "/images/teams/3D Upstate.svg" },
         { "name": "Team 10", "logo": "/images/teams/TEAM TEN.svg" },
-        { "name": "Hilltop 29", "logo": "/images/teams/hilltop_lax.svg" },
-        { "name": "BPG National", "logo": "/images/teams/BPG.svg" }
+        { "name": "Brotherly Love", "logo": "/images/teams/Brotherly Love.svg" },
+        { "name": "Freedom", "logo": "/images/teams/Freedom.svg" },
+        { "name": "Hilltop Uncommitted", "logo": "/images/teams/hilltop_lax.svg" }
       ]
     }
   ]
