@@ -22,8 +22,11 @@ const teamLogos = [
 
 <BaseLayout title="Home">
   <!-- HERO -->
-  <section class="relative min-h-screen flex items-center overflow-hidden bg-brand-dark">
-    <img src="/images/PHILLY_BOWL_BANNER.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
+  <section class="relative min-h-screen flex items-start pt-12 md:pt-0 md:items-center overflow-hidden bg-brand-dark">
+    <picture>
+      <source media="(max-width: 767px)" srcset="/images/background_mobile.png" />
+      <img src="/images/PHILLY_BOWL_BANNER.png" alt="" class="absolute inset-0 w-full h-full object-cover" />
+    </picture>
 
     <div class="relative z-10 px-4 sm:px-6 lg:px-8 max-w-[1280px] mx-auto w-full">
       <div class="max-w-xl">
