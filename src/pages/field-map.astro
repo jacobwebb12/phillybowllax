@@ -11,15 +11,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="py-32 bg-white">
-    <div class="mx-auto max-w-[600px] px-4 text-center">
-      <div class="w-20 h-20 rounded-full bg-brand-blue/10 flex items-center justify-center mx-auto mb-8">
-        <svg class="w-10 h-10 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+  <section class="py-16 md:py-24 bg-white">
+    <div class="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-8">
+      <div class="w-full rounded-lg border border-gray-200 overflow-hidden shadow-sm bg-brand-off-white">
+        <iframe
+          src="/images/WSFS%20Map%20(1).pdf"
+          title="WSFS Sports Complex Field Map"
+          class="w-full h-[70vh] md:h-[85vh]"
+        ></iframe>
       </div>
-      <h2 class="text-3xl md:text-4xl text-brand-dark mb-4">Coming Soon</h2>
-      <div class="w-16 h-1 bg-brand-blue mx-auto mb-8 rounded-full"></div>
-      <p class="text-brand-gray max-w-md mx-auto">
-        The field map will be posted here prior to the tournament. Check back closer to July 17 for field assignments and venue layout.
+      <p class="text-center text-brand-gray text-sm mt-6">
+        Trouble viewing?
+        <a
+          href="/images/WSFS%20Map%20(1).pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-blue hover:text-brand-light-blue underline"
+        >
+          Open the field map PDF
+        </a>
       </p>
     </div>
   </section>
